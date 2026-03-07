@@ -19,10 +19,12 @@ The simulations were performed using a high-resolution meshgrid in MATLAB to cap
 
 ### 1. Streamlines ($\psi$)
 The plot below shows how the uniform flow (from left to right) interacts with the source at the origin, creating the characteristic "half-body" boundary.
+
 ![Stream Function](results/stream_function_rankine.png)
 
 ### 2. Velocity Potential ($\phi$)
 The following plot shows the equipotential lines. The perpendicularity between these lines and the streamlines confirms the validity of the potential flow model.
+
 ![Velocity Potential](results/velocity_potential_rankine.png)
 
 ---
