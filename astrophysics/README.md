@@ -1,31 +1,36 @@
-# Milky Way Rotation Curve Analysis 🌌
+# Astroparticle Physics & Cosmology 🌌
 
-This project implements a numerical model to analyze the rotation velocity of the Milky Way as a function of its radial distance, addressing one of the most significant evidences for the existence of **Dark Matter**.
+This folder contains computational models developed during my **Undergraduate Research (IC)** supported by **FAPESP** (São Paulo Research Foundation). The projects focus on the intersection of Galactic Dynamics and Dark Matter (WIMP) detection.
 
-## 🔬 Scientific Context
-In Newtonian (Keplerian) dynamics, the rotation velocity of a galaxy is expected to decrease as distance from the center increases ($V \propto r^{-1/2}$). However, observational data shows a "flat" rotation curve at large radii. This implementation decomposes the galactic mass into two primary components to explain this phenomenon:
+## 1. Milky Way Rotation Curve Analysis
+**File:** `milky_way_nfw_profile.cpp`
 
-1.  **Stellar Disk (Baryonic Matter):** Modeled with an exponential disk profile.
-2.  **Dark Matter Halo (Non-Baryonic):** Modeled using the **Navarro-Frenk-White (NFW)** density profile, which is the standard in modern cosmology.
+This project simulates the rotation velocity of our galaxy to address the "missing mass" problem. It compares observational data with a multi-component mass model.
 
-## 📊 Resulting Visualization
+### 🔬 Physics & Modeling
+* **Stellar Disk:** Modeled using an exponential mass distribution.
+* **Dark Matter Halo:** Implemented using the **Navarro-Frenk-White (NFW)** profile, the benchmark in modern cosmology.
+* **Data Source:** Observational points provided by the **MIT Haystack Observatory** ([Memo SRT 011](https://www.haystack.mit.edu/wp-content/uploads/2020/07/memo_SRT_011.pdf)).
 
-![Milky Way Rotation Curve Result](rotation_curve_result.png)
+### 📊 Results
 
-*The plot illustrates how the **Stellar Disk** (red dashed line) fails to account for high velocities at the outskirts, while the addition of the **NFW Halo** (blue dashed line) aligns the **Total Fit** (black solid line) with the experimental data.*
+![Rotation Curve Result](rotation_curve_result.png)
+*The **Total Fit** (black solid line) successfully matches the experimental data points by incorporating the Dark Matter halo (blue dashed line).*
 
-## 🛠️ Technical Features
+---
+
+## 2. Solar WIMP Capture Rates
+**File:** `solar_wimp_capture_rates.cpp`
+
+This simulation calculates the rate at which **Weakly Interacting Massive Particles (WIMPs)**, a leading Dark Matter candidate, are gravitationally captured by the Sun through scattering with various nuclei.
+
+### 🔬 Key Features
+* **Multi-Element Modeling:** Individual capture contributions from **Hydrogen (H)** through **Iron (Fe)**.
+* **Nuclear Form Factors:** Implementation of $F(x)$ to account for the loss of coherence in high-energy WIMP-nucleus scattering (based on the Jungman et al. model).
+
+---
+
+## 🛠️ Technical Framework
 * **Language:** C++
-* **Framework:** [CERN ROOT](https://root.cern/) (Data Analysis Framework).
-* **Algorithm:** * Multi-component function fitting using `TF1`.
-    * Statistical error handling with `TGraphErrors`.
-    * Integration of physical constants (Gravitational constant $G$, Critical Density $\rho_{cr}$, etc.).
-
-## 📜 Credits & Data Sources
-* **Research Grant:** Developed during an Undergraduate Research Fellowship supported by **FAPESP** (São Paulo Research Foundation).
-* **Data Source:** Observational rotation data provided by the **MIT Haystack Observatory** ([Memo SRT 011](https://www.haystack.mit.edu/wp-content/uploads/2020/07/memo_SRT_011.pdf)).
-
-## 🚀 How to Run
-Ensure you have the CERN ROOT framework installed. Run the script directly in the ROOT interpreter:
-```bash
-root -l milky_way_nfw_profile.cpp
+* **Analysis Tool:** [CERN ROOT](https://root.cern/) (used for high-precision function fitting and statistical plotting).
+* **Research Grant:** FAPESP (São Paulo Research Foundation).
