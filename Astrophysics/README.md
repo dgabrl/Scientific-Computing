@@ -14,7 +14,7 @@ This project simulates the rotation velocity of our galaxy to address the "missi
 
 ### 📊 Results
 
-![Rotation Curve Result](rotation_curve_result.png)
+![Rotation Curve Result](results/rotation_curve_result.png)
 *The **Total Fit** (black solid line) successfully matches the experimental data points by incorporating the Dark Matter halo (blue dashed line).*
 
 ---
