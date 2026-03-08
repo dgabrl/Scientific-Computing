@@ -19,8 +19,3 @@ Numerical solutions for potential flow theory.
 Computational methods applied to Dark Matter research and Galactic Dynamics.
 * **Capture Rates:** Numerical integration for WIMP capture in celestial bodies.
 * **Rotation Curves:** Mathematical modeling of galactic density profiles (NFW).
-
-## 🛠️ Technical Skills
-* **Statistical Modeling:** Chi-square minimization and non-linear least squares.
-* **Numerical Analysis:** Integration, root-finding, and differential equations.
-* **Scientific Tools:** Advanced proficiency in CERN ROOT, MATLAB, and C++.
